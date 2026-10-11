@@ -5,6 +5,8 @@ import helmet from "helmet";
 
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
+import machineRoutes from "./routes/machineRoutes.js";
+import sensorRoutes from "./routes/sensorRoutes.js";
 
 dotenv.config();
 
@@ -14,6 +16,8 @@ app.use(cors());
 app.use(helmet());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/machines",machineRoutes);
+app.use("/api/sensors", sensorRoutes);
 
 
 
